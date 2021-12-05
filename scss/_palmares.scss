@@ -1,0 +1,110 @@
+// Estructura principal del Grid
+.contenedor {
+  .titulo__contenido {
+    font-size: 2.7rem;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    font-family: "Roboto Mono", monospace;
+  }
+
+  .premios {
+    width: 80%;
+    margin: 15px auto;
+    .encabezado {
+      border: solid 2px #000;
+      h3 {
+        font-size: 1.6rem;
+        margin: 5px;
+        font-family: "Prompt", sans-serif;
+        font-weight: 600;
+      }
+    }
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: solid 2px #000;
+      p {
+        margin: 5px;
+        font-size: 1.3rem;
+      }
+    }
+    .nacionales {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+      .fondoNavy {
+        background-color: #000080;
+        color: #fff;
+      }
+      .equipo {
+        grid-column: 2;
+        grid-row: 2/27;
+      }
+      .pais {
+        grid-column: 3;
+        grid-row: 2/27;
+        .iconoBandera {
+          text-align: left;
+          width: 20%;
+          margin: 5px 10px 5px 25px;
+        }
+      }
+    }
+    .internacionales {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      text-align: center;
+      .fondoOrange {
+        background-color: #ffab4c;
+        color: #000;
+      }
+      .equipo {
+        grid-column: 2;
+        grid-row: 5/14;
+      }
+      .sede {
+        display: flex;
+        justify-content: flex-start;
+        .iconoBandera {
+          text-align: left;
+          width: 20%;
+          margin: 5px 10px 5px 25px;
+        }
+      }
+    }
+    .individuales {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      text-align: center;
+      .fondoGreen {
+        background-color: #b2ea70;
+        color: #000;
+      }
+      .x2:nth-of-type(3) {
+        grid-row: 2/4;
+      }
+      .x2:nth-of-type(6) {
+        grid-row: 4/6;
+      }
+      .x2:nth-of-type(9) {
+        grid-row: 6/8;
+      }
+      .x2:nth-of-type(12) {
+        grid-row: 8/10;
+      }
+      .x2:nth-of-type(31) {
+        grid-row: 20/22;
+      }
+      .x3:nth-of-type(19) {
+        grid-row: 12/15;
+      }
+      .x3:nth-of-type(27) {
+        grid-row: 17/20;
+      }
+      .x3:nth-of-type(34) {
+        grid-row: 22/25;
+      }
+    }
+  }
+}

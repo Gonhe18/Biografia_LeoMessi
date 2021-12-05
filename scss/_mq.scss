@@ -1,0 +1,158 @@
+@media screen and (max-width: 690px) {
+  //    INDEX
+  /* Header */
+  .index {
+    .header__index {
+      margin-bottom: 10px;
+      .imgLogo-index {
+        left: 5%;
+      }
+      h1 {
+        width: 60%;
+        font-size: 1.8rem;
+        padding-right: 10px;
+      }
+    }
+    /* Cuerpo de la web */
+    .contenedor-index {
+      .contenedorCard {
+        width: 90%;
+        flex: 0;
+        display: flex;
+        flex-direction: column;
+        .tarjeta {
+          width: 100%;
+          margin: 2px 0;
+        }
+      }
+      .btn {
+        margin: 15px 0;
+      }
+    }
+    .contenedor {
+      .titulo__principal {
+        font-size: 2.8rem;
+      }
+    }
+  }
+  //    PALMARES
+  /* Estructura principal del Grid */
+  .contenedor {
+    .titulo__contenido {
+      font-size: 1.8rem;
+    }
+    .premios {
+      width: 100%;
+      /* Encabezados de Grid */
+      .encabezado h3 {
+        font-size: 1.3rem;
+      }
+      .item {
+        flex-direction: column;
+        p {
+          margin: 0;
+          font-size: 1.2rem;
+        }
+      }
+      .sede,
+      .pais {
+        display: flex;
+        flex-direction: column;
+        .iconoBandera {
+          width: 30%;
+          margin: 10px auto;
+        }
+      }
+    }
+  }
+  //    CONTACTO
+  .formContacto {
+    width: 90%;
+    .btn-form {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  //    CARRERA
+  // Heaeder
+  .imgLogo {
+    margin-left: 25px;
+  }
+  // Contenido
+  .contenedor {
+    .titulo__principal {
+      font-size: 3rem;
+    }
+    .cajaSeccion {
+      margin: 5px auto;
+      .titulo__contenido {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+      }
+      .cajaContenido {
+        .tituloSeccion {
+          font-size: 1.4rem;
+          margin: 25px 0 10px 0;
+        }
+        .texto__intro {
+          width: 90%;
+          margin: 10px auto;
+          font-size: 1.2rem;
+        }
+        .contenedor__texto--derecha {
+          flex-direction: column;
+          .texto__contenido {
+            width: 100%;
+            padding: 0;
+          }
+          p {
+            width: 95%;
+          }
+          .img__contenido--izquierdo {
+            order: 0;
+            width: 90%;
+          }
+        }
+        .contenedor__texto--izquierda {
+          flex-direction: column;
+          .texto__contenido {
+            width: 100%;
+            padding: 0;
+          }
+          p {
+            width: 95%;
+          }
+          .img__contenido--derecho {
+            width: 90%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-height: 640px) {
+  .header__index {
+    .imgLogo-index {
+      width: 65px;
+    }
+  }
+  .contenedor-index {
+    height: 100%;
+    .contenedorCard {
+      height: 85vh;
+    }
+    .tarjeta {
+      height: 80%;
+      margin-top: 20px;
+    }
+  }
+  .footer-index {
+    margin-top: 15px;
+  }
+  .formularioContacto {
+    height: 100%;
+  }
+}
