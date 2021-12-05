@@ -1,0 +1,170 @@
+// Body
+.index {
+  background-image: url(../img/0.0-fondoIndex.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  // Header
+  .header__index {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    .imgLogo-index {
+      width: 45px;
+      position: relative;
+      left: 8%;
+    }
+    h1 {
+      font-size: 3rem;
+      text-align: right;
+      padding-right: 20px;
+      font-family: "Roboto Mono", monospace;
+    }
+  }
+
+  //  Cuerpo de la web
+  .contenedor-index {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .contenedorCard {
+      width: 100%;
+      height: 80vh;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      align-items: center;
+      // Card
+      .tarjeta {
+        width: 80%;
+        height: 90%;
+        margin: auto;
+        position: relative;
+        background: rgba(255, 255, 255, 0.363);
+        overflow: hidden;
+        box-shadow: 2px 4px 10px black;
+
+        img {
+          max-width: 100%;
+          height: 240px;
+          vertical-align: top;
+          opacity: 0;
+        }
+        //  Efectos card
+        .over_pic {
+          position: absolute;
+          width: 50%;
+          height: 50%;
+          background-size: 200% 200%;
+          transition: all 0.7s ease-out;
+          z-index: 2;
+          &:nth-of-type(1) {
+            left: 0;
+            top: 0;
+            background-position: left top;
+          }
+          &:nth-of-type(2) {
+            right: 0;
+            top: 0;
+            background-position: right top;
+          }
+          &:nth-of-type(3) {
+            left: 0;
+            bottom: 0;
+            background-position: left bottom;
+          }
+          &:nth-of-type(4) {
+            right: 0;
+            bottom: 0;
+            background-position: right bottom;
+          }
+        }
+        &:hover {
+          .over_pic {
+            &:nth-of-type(1) {
+              transform: translate(-100%, -100%);
+            }
+            &:nth-of-type(2) {
+              transform: translate(100%, -100%);
+            }
+            &:nth-of-type(3) {
+              transform: translate(-100%, 100%);
+            }
+            &:nth-of-type(4) {
+              transform: translate(100%, 100%);
+            }
+          }
+        }
+        .pic1 {
+          background-image: url(../img/1.0-comienzos_index.jpg);
+        }
+        .pic2 {
+          background-image: url(../img/2.0-club_index.jpg);
+        }
+        .pic3 {
+          background-image: url(../img/3.0-seleccion_index.jpg);
+        }
+        .pic4 {
+          background-image: url(../img/4.0-palmares_index.jpg);
+        }
+        .descripcion {
+          position: absolute;
+          left: 0;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          padding: 30px;
+          color: #000;
+          text-align: center;
+          font-size: 20px;
+          line-height: 1.4;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          align-content: center;
+          flex-wrap: wrap;
+          transition: all 0.7s ease-out;
+          transform: scale(0.6);
+          opacity: 0;
+          text-decoration: none;
+
+          h3 {
+            font-size: 26px;
+            margin: 0;
+          }
+        }
+        &:hover .descripcion {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    }
+    /* Botón */
+    .btn a {
+      width: 10%;
+      text-align: center;
+      font-size: 1.2rem;
+      text-decoration: none;
+      padding: 0 20px;
+      color: #000;
+      border: #fff 1px solid;
+      box-shadow: 2px 4px 10px #000;
+    }
+    /* Footer index */
+  }
+}
+.footer-index {
+  margin-top: 3px;
+  p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #000;
+    font-weight: bold;
+  }
+}
