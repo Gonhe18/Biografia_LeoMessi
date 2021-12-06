@@ -22,11 +22,11 @@
         flex-direction: column;
         .tarjeta {
           width: 100%;
-          margin: 2px 0;
+          margin: 10px 0;
         }
       }
-      .btn {
-        margin: 15px 0;
+      .btn-index {
+        margin: 10px 0;
       }
     }
     .contenedor {
@@ -133,26 +133,26 @@
   }
 }
 
-@media screen and (min-height: 640px) {
-  .header__index {
-    .imgLogo-index {
-      width: 65px;
-    }
-  }
-  .contenedor-index {
-    height: 100%;
-    .contenedorCard {
-      height: 85vh;
-    }
-    .tarjeta {
-      height: 80%;
-      margin-top: 20px;
-    }
-  }
-  .footer-index {
-    margin-top: 15px;
-  }
-  .formularioContacto {
-    height: 100%;
-  }
-}
+// @media screen and (min-height: 640px) {
+//   .header__index {
+//     .imgLogo-index {
+//       width: 65px;
+//     }
+//   }
+//   .contenedor-index {
+//     height: 100%;
+//     .contenedorCard {
+//       height: 85vh;
+//     }
+//     .tarjeta {
+//       height: 80%;
+//       margin-top: 20px;
+//     }
+//   }
+//   .footer-index {
+//     margin-top: 15px;
+//   }
+//   .formularioContacto {
+//     height: 100%;
+//   }
+// }
