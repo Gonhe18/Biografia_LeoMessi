@@ -115,11 +115,7 @@
           top: 0;
           right: 0;
           bottom: 0;
-          padding: 30px;
-          color: #000;
-          text-align: center;
-          font-size: 20px;
-          line-height: 1.4;
+          padding: 20px;
           display: flex;
           align-items: center;
           justify-content: center;
@@ -129,10 +125,19 @@
           transform: scale(0.6);
           opacity: 0;
           text-decoration: none;
+          color: #000;
 
           h3 {
-            font-size: 26px;
-            margin: 0;
+            font-size:2.3rem;
+            margin-bottom: 5px;
+            font-family: "Roboto Mono", monospace;
+          }
+          p{
+            color: #000;
+            text-align: center;
+            font-size: 20px;
+            line-height: 1.3;
+            font-family: "Nunito", sans-serif;
           }
         }
         &:hover .descripcion {
@@ -163,7 +168,7 @@
           align-items: center;
           justify-content: center;
           box-sizing: border-box;
-          border: 5px solid black;
+          border: 2px solid black;
         }
         &:before {
           color: white;
