@@ -1,5 +1,5 @@
 @media screen and (max-width: 690px) {
-//    INDEX
+  //    INDEX
   .index {
     // Header
     .header__index {
@@ -22,17 +22,17 @@
         height: 100vh;
         .tarjeta {
           width: 100%;
-          margin: 10px 0;
-          .descripcion{
+          margin-bottom: 15px;
+          .descripcion {
             padding: 0 10px;
 
-            h3{
-              font-size: 1.4rem;
-              margin-bottom: 5px;
+            h3 {
+              font-size: 1.5rem;
+              margin-top: 5px;
             }
-            p{
-              font-size: 1.1rem;
-              line-height: 1.1;
+            p {
+              font-size: 1.2rem;
+              line-height: 1.2;
             }
           }
         }
@@ -42,14 +42,14 @@
         margin: 10px 0;
       }
     }
-//    CARRERA
+    //    CARRERA
     .contenedor {
       .titulo__principal {
         font-size: 2.8rem;
       }
     }
   }
-//    PALMARES
+  //    PALMARES
   // Estructura grid
   .contenedor {
     .titulo__contenido {
@@ -57,7 +57,7 @@
     }
     .premios {
       width: 100%;
-    // Encabezado Grid
+      // Encabezado Grid
       .encabezado h3 {
         font-size: 1.3rem;
       }
@@ -79,7 +79,7 @@
       }
     }
   }
-//    CONTACTO
+  //    CONTACTO
   .formContacto {
     width: 90%;
     .btn-form {
@@ -89,7 +89,7 @@
 }
 
 @media screen and (max-width: 1024px) {
-//    CARRERA
+  //    CARRERA
   // Heaeder
   .imgLogo {
     margin-left: 25px;
