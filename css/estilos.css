@@ -151,12 +151,6 @@ h4 {
         .index .contenedor-index .btn-index a:hover {
           transform: translateZ(-15px) rotateX(-90deg); }
 
-.footer-index p {
-  font-size: 1.1rem;
-  text-align: center;
-  color: #000;
-  font-weight: bold; }
-
 .nav-link {
   font-size: 1.3rem;
   font-weight: 400;
@@ -309,10 +303,10 @@ h4 {
     .contenedor .premios .individuales .x3:nth-of-type(34) {
       grid-row: 22/25; }
 
-.formularioContacto {
+.introForm {
   width: 95%;
   margin: auto; }
-  .formularioContacto .txtContacto {
+  .introForm .txtContacto {
     width: 100%;
     padding: 0 5px;
     font-size: 1.2rem;
@@ -326,7 +320,12 @@ h4 {
     width: 30%;
     margin: 10px 0; }
 
-/*      FOOTER      */
+.footer-index p {
+  font-size: 1.1rem;
+  text-align: center;
+  color: #000;
+  font-weight: bold; }
+
 .footer {
   background: #000;
   padding: 1px 0; }
@@ -337,35 +336,29 @@ h4 {
     margin: 2px 0; }
 
 @media screen and (max-width: 690px) {
-  /* Header */
-  .index {
-    /* Cuerpo de la web */ }
-    .index .header__index {
-      margin-bottom: 10px; }
-      .index .header__index .imgLogo-index {
-        left: 5%; }
-      .index .header__index h1 {
-        width: 60%;
-        font-size: 1.8rem;
-        padding-right: 10px; }
-    .index .contenedor-index .contenedorCard {
-      width: 90%;
-      flex: 0;
-      display: flex;
-      flex-direction: column; }
-      .index .contenedor-index .contenedorCard .tarjeta {
-        width: 100%;
-        margin: 10px 0; }
-    .index .contenedor-index .btn-index {
+  .index .header__index {
+    margin-bottom: 10px; }
+    .index .header__index .imgLogo-index {
+      left: 5%; }
+    .index .header__index h1 {
+      width: 60%;
+      font-size: 1.8rem;
+      padding-right: 10px; }
+  .index .contenedor-index .contenedorCard {
+    width: 90%;
+    display: flex;
+    flex-direction: column; }
+    .index .contenedor-index .contenedorCard .tarjeta {
+      width: 100%;
       margin: 10px 0; }
-    .index .contenedor .titulo__principal {
-      font-size: 2.8rem; }
-  /* Estructura principal del Grid */
+  .index .contenedor-index .btn-index {
+    margin: 10px 0; }
+  .index .contenedor .titulo__principal {
+    font-size: 2.8rem; }
   .contenedor .titulo__contenido {
     font-size: 1.8rem; }
   .contenedor .premios {
-    width: 100%;
-    /* Encabezados de Grid */ }
+    width: 100%; }
     .contenedor .premios .encabezado h3 {
       font-size: 1.3rem; }
     .contenedor .premios .item {
