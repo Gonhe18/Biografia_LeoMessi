@@ -23,7 +23,7 @@
       font-size: 3rem;
       text-align: right;
       padding-right: 20px;
-      font-family: "Roboto Mono", monospace;
+      font-family: $tituloContenido;
     }
   }
   //  Cuerpo de la web
@@ -129,14 +129,14 @@
 
           h3 {
             font-size: 2.3rem;
-            font-family: "Roboto Mono", monospace;
+            font-family: $tituloSeccion;
           }
           p {
             color: #000;
             text-align: center;
             font-size: 20px;
             line-height: 1.3;
-            font-family: "Nunito", sans-serif;
+            font-family: $textos;
             padding: 10px;
           }
         }
@@ -169,6 +169,7 @@
           justify-content: center;
           box-sizing: border-box;
           border: 2px solid black;
+          border-radius: 20px;
         }
         &:before {
           color: white;
