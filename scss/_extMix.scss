@@ -10,6 +10,7 @@
    grid-template-columns: repeat(4, 1fr);
 }
 
+
 //    Mixins
 @mixin sizes($width, $height)  {
    width: $width;
@@ -20,4 +21,14 @@
    text-align: left;
    width: $widthTotal * 0.2;
    margin: 5px 10px 5px 25px;
+}
+
+@mixin column{
+   display: flex;
+   flex-direction: column;
+}
+
+@mixin banderasMq{
+   width: $widthTotal * 0.4;
+   margin: 10px auto;
 }
