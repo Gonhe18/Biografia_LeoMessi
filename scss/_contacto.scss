@@ -1,19 +1,19 @@
 .introForm {
-  width: 95%;
+  width: $widthTotal * 0.95;
   margin: auto;
   .txtContacto {
-    width: 100%;
-    padding: 0 5px;
-    font-size: 1.2rem;
-    line-height: 1.3;
+    font-size: $contenido;
     font-family: $textos;
+    width: $widthTotal;
+    padding: 0 5px;
+    line-height: $interlineado;
   }
 }
 .formContacto {
-  width: 70%;
+  width: $widthTotal * 0.7;
   margin: auto;
   .btn-form {
-    width: 30%;
+    width: $widthTotal * 0.3;
     margin: 10px 0;
   }
 }
