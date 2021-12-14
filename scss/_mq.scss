@@ -9,32 +9,31 @@
         width: 55px;
       }
       h1 {
-        width: 70%;
-        font-size: 1.8rem;
+        width: $widthTotal * 0.7;
+        font-size: $principal * 0.45;
         padding-right: 10px;
       }
     }
     // Cuerpo de la web
     .contenedor-index {
       .contenedorCard {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
+        @include column;
+        width: $widthTotal * 0.9;
         min-height: 740px;
         .tarjeta {
-          width: 100%;
+          width: $widthTotal;
           margin-bottom: 15px;
           min-height: 170px;
           .descripcion {
             padding: 0 5px;
 
-            h3 {
-              font-size: 1.5rem;
+            h2 {
+              font-size: $secundario - 1;
               margin-top: 10px;
             }
             p {
-              font-size: 1.2rem;
-              line-height: 1.2;
+              font-size: $contenido - 0.1;
+              line-height: $interlineado;
             }
           }
         }
@@ -48,45 +47,42 @@
   /*    CARRERA     */
   .contenedor {
     .titulo__principal {
-      font-size: 2.8rem;
+      font-size: $principal - 1;
+    }
+    .titulo__contenido {
+      font-size: $secundario - 1;
     }
   }
   /*    PALMARES      */
   // Estructura grid
   .contenedor {
-    .titulo__contenido {
-      font-size: 1.8rem;
-    }
     .premios {
-      width: 100%;
+      width: $widthTotal;
+      padding: 0 10px;
       // Encabezado Grid
       .encabezado h3 {
-        font-size: 1.3rem;
+        font-size: $titPalmares - 0.5;
       }
       .item {
         flex-direction: column;
         p {
+          font-size: $contenido - 0.2;
           margin: 0;
-          font-size: 1.1rem;
         }
       }
       .nacionales{
         .pais {
-          display: flex;
-          flex-direction: column;
+          @include column;
           .iconoBandera {
-            width: 40%;
-            margin: 10px auto;
+            @include banderasMq;
           }
         }
       }
       .internacionales{
         .sede{
-          display: flex;
-          flex-direction: column;
+          @include column;
           .iconoBandera {
-            width: 40%;
-            margin: 10px auto;
+            @include banderasMq;
           }
         }
       }
@@ -94,9 +90,9 @@
   }
   /*    CONTACTO      */
   .formContacto {
-    width: 90%;
+    width: $widthTotal * 0.9;
     .btn-form {
-      width: 70%;
+      width: $widthTotal * 0.7;
     }
   }
 }
@@ -109,49 +105,48 @@
   // Contenido
   .contenedor {
     .titulo__principal {
-      font-size: 3rem;
+      font-size: $principal - 1;
     }
     .cajaSeccion {
       margin: 5px auto;
       .titulo__contenido {
-        font-size: 1.8rem;
+        font-size: $secundario * 0.6;
         margin-bottom: 10px;
       }
       .cajaContenido {
         .tituloSeccion {
-          font-size: 1.4rem;
+          font-size: $titSeccion * 0.7;
           margin: 25px 0 10px 0;
         }
         .texto__intro {
-          width: 90%;
+          width:$widthTotal - 10;
           margin: 10px auto;
-          font-size: 1.2rem;
         }
         .contenedor__texto--derecha {
           flex-direction: column;
           .texto__contenido {
-            width: 100%;
+            width: $widthTotal;
             padding: 0;
           }
           p {
-            width: 95%;
+            width: $widthTotal * 0.95;
           }
           .img__contenido--izquierdo {
             order: 0;
-            width: 90%;
+            width: $widthTotal * 0.9;
           }
         }
         .contenedor__texto--izquierda {
           flex-direction: column;
           .texto__contenido {
-            width: 100%;
+            width: $widthTotal;
             padding: 0;
           }
           p {
-            width: 95%;
+            width: $widthTotal * 0.95;
           }
           .img__contenido--derecho {
-            width: 90%;
+            width: $widthTotal * 0.9;
           }
         }
       }

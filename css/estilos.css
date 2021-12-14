@@ -119,7 +119,8 @@ h1, h2, h3, h4 {
             color: #000;
             text-align: center;
             line-height: 1.3;
-            padding: 10px; }
+            padding: 10px;
+            font-weight: bold; }
         .index .contenedor-index .contenedorCard .tarjeta:hover .descripcion {
           opacity: 1;
           transform: scale(1); }
@@ -331,9 +332,9 @@ h1, h2, h3, h4 {
       font-size: 1.8rem;
       padding-right: 10px; }
   .index .contenedor-index .contenedorCard {
-    width: 90%;
     display: flex;
     flex-direction: column;
+    width: 90%;
     min-height: 740px; }
     .index .contenedor-index .contenedorCard .tarjeta {
       width: 100%;
@@ -341,29 +342,30 @@ h1, h2, h3, h4 {
       min-height: 170px; }
       .index .contenedor-index .contenedorCard .tarjeta .descripcion {
         padding: 0 5px; }
-        .index .contenedor-index .contenedorCard .tarjeta .descripcion h3 {
-          font-size: 1.5rem;
+        .index .contenedor-index .contenedorCard .tarjeta .descripcion h2 {
+          font-size: 2rem;
           margin-top: 10px; }
         .index .contenedor-index .contenedorCard .tarjeta .descripcion p {
-          font-size: 1.2rem;
-          line-height: 1.2; }
+          font-size: 1.1rem;
+          line-height: 1.3; }
   .index .contenedor-index .btn-index {
     margin-bottom: 5px; }
   /*    CARRERA     */
   .contenedor .titulo__principal {
-    font-size: 2.8rem; }
-  /*    PALMARES      */
+    font-size: 3rem; }
   .contenedor .titulo__contenido {
-    font-size: 1.8rem; }
+    font-size: 2rem; }
+  /*    PALMARES      */
   .contenedor .premios {
-    width: 100%; }
+    width: 100%;
+    padding: 0 10px; }
     .contenedor .premios .encabezado h3 {
       font-size: 1.3rem; }
     .contenedor .premios .item {
       flex-direction: column; }
       .contenedor .premios .item p {
-        margin: 0;
-        font-size: 1.1rem; }
+        font-size: 1rem;
+        margin: 0; }
     .contenedor .premios .nacionales .pais {
       display: flex;
       flex-direction: column; }
@@ -398,8 +400,7 @@ h1, h2, h3, h4 {
       margin: 25px 0 10px 0; }
     .contenedor .cajaSeccion .cajaContenido .texto__intro {
       width: 90%;
-      margin: 10px auto;
-      font-size: 1.2rem; }
+      margin: 10px auto; }
     .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha {
       flex-direction: column; }
       .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha .texto__contenido {
