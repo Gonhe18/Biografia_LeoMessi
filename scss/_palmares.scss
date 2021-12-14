@@ -1,40 +1,36 @@
 // Estructura principal del Grid
 .contenedor {
   .titulo__contenido {
-    font-size: 2.7rem;
+    font-size: $secundario;
+    font-family: $tituloContenido;
     margin-bottom: 20px;
     text-decoration: underline;
-    font-family: $tituloContenido;
   }
   .premios {
-    width: 80%;
+    width: $widthTotal * 0.8;
     margin: 15px auto;
     .encabezado {
       border: solid 2px #000;
       h3 {
-        font-size: 1.6rem;
-        margin: 5px;
+        font-size: $titPalmares;
         font-family: $tituloPalmares;
+        margin: 5px;
         font-weight: 600;
       }
     }
     .item {
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @extend .flex_aCenter;
       border: solid 2px #000;
       p {
+        font-size: $contenido;
         margin: 5px;
-        font-size: 1.3rem;
       }
     }
     .nacionales {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      text-align: center;
-      .fondoNavy {
-        background-color: #000080;
-        color: #fff;
+      @extend .grid_center;
+      .fondoNac {
+        background-color: $tableNacional;
+        color: $white;
       }
       .equipo {
         grid-column: 2;
@@ -44,19 +40,15 @@
         grid-column: 3;
         grid-row: 2/27;
         .iconoBandera {
-          text-align: left;
-          width: 20%;
-          margin: 5px 10px 5px 25px;
+          @include banderas;
         }
       }
     }
     .internacionales {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      text-align: center;
-      .fondoOrange {
-        background-color: #ffab4c;
-        color: #000;
+      @extend .grid_center;
+      .fondoInter {
+        background-color: $tableInternacional;
+        color: $black;
       }
       .equipo {
         grid-column: 2;
@@ -66,19 +58,16 @@
         display: flex;
         justify-content: flex-start;
         .iconoBandera {
-          text-align: left;
-          width: 20%;
-          margin: 5px 10px 5px 25px;
+          @include banderas;
         }
       }
     }
     .individuales {
-      display: grid;
+      @extend .grid_center;
       grid-template-columns: repeat(2, 1fr);
-      text-align: center;
-      .fondoGreen {
-        background-color: #b2ea70;
-        color: #000;
+      .fondoInd {
+        background-color: $tableIndividual;
+        color: $black;
       }
       .x2:nth-of-type(3) {
         grid-row: 2/4;

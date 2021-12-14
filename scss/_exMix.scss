@@ -1,0 +1,23 @@
+//    Extend
+.flex_aCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grid_center{
+   display: grid;
+   text-align: center;
+   grid-template-columns: repeat(4, 1fr);
+}
+
+//    Mixins
+@mixin sizes($width, $height)  {
+   width: $width;
+   height: $height;
+}
+
+@mixin banderas{
+   text-align: left;
+   width: $widthTotal * 0.2;
+   margin: 5px 10px 5px 25px;
+}

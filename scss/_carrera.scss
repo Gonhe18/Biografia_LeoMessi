@@ -1,6 +1,6 @@
 //  Header
 .nav-link {
-  font-size: 1.3rem;
+  font-size: $contenido;
   font-weight: 400;
   margin: 0 15px;
   &:hover {
@@ -14,53 +14,51 @@
 }
 // Cuerpo de la web
 .contenedor {
-  width: 100%;
-  display: flex;
+  @extend .flex_aCenter;
+  width: $widthTotal;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: space-between;
   .titulo__principal {
-    width: 100%;
-    font-size: 4rem;
-    margin: 15px 0;
+    font-size: $principal;
     font-family: $tituloPrincipal;
+    width: $widthTotal;
+    margin: 15px 0;
   }
   .cajaSeccion {
-    width: 95%;
+    width: $widthTotal * 0.95;
     margin: 10px auto;
     .titulo__contenido {
-      font-size: 2.7rem;
+      font-size: $secundario;
+      font-family: $tituloContenido;
       margin-bottom: 20px;
       text-decoration: underline;
-      font-family: $tituloContenido;
     }
     .cajaContenido {
-      width: 100%;
+      width: $widthTotal;
       .texto__intro {
-        font-size: 1.2rem;
-        line-height: 1.3;
+        font-size: $contenido;
         font-family: $textos;
+        line-height: $interlineado;
       }
       .tituloSeccion {
-        width: 100%;
-        font-size: 2rem;
-        margin: 30px 0;
+        font-size: $titSeccion;
         font-family: $tituloSeccion;
+        width: $widthTotal;
+        margin: 30px 0;
       }
       .contenedor__texto--derecha,
       .contenedor__texto--izquierda {
-        display: flex;
+        @extend .flex_aCenter;
         flex-flow: row wrap;
-        align-items: center;
         padding: 0 5px;
         .texto__contenido {
-          width: 50%;
+          width: $widthTotal * 0.5;
         }
         p {
-          padding: 5px 10px;
-          font-size: 1.2rem;
-          line-height: 1.3;
+          font-size: $contenido;
           font-family: $textos;
+          padding: 5px 10px;
+          line-height: $interlineado;
           margin: 0 auto;
           cite {
             color: rgb(70, 66, 66);
@@ -73,12 +71,12 @@
       .contenedor__texto--derecha {
         .img__contenido--izquierdo {
           order: -1;
-          width: 50%;
+          width:$widthTotal * 0.5;
         }
       }
       .contenedor__texto--izquierda {
         .img__contenido--derecho {
-          width: 50%;
+          width:$widthTotal * 0.5;
         }
       }
     }
