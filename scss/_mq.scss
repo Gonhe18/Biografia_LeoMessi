@@ -28,11 +28,11 @@
             padding: 0 5px;
 
             h2 {
-              font-size: $secundario - 1;
-              margin-top: 10px;
+              font-size: $secundario - 1.5;
+              margin-top: 5px;
             }
             p {
-              font-size: $contenido - 0.1;
+              font-size: $contenido - 0.2;
               line-height: $interlineado;
             }
           }
@@ -52,6 +52,16 @@
     .titulo__contenido {
       font-size: $secundario - 1;
     }
+    .cajaSeccion {
+      .cajaContenido {
+        .contenedor__texto--derecha,
+        .contenedor__texto--izquierda {
+          iframe {
+            height: 300px;
+          }
+        }
+      }
+    }
   }
   /*    PALMARES      */
   // Estructura grid
@@ -70,7 +80,7 @@
           margin: 0;
         }
       }
-      .nacionales{
+      .nacionales {
         .pais {
           @include column;
           .iconoBandera {
@@ -78,8 +88,8 @@
           }
         }
       }
-      .internacionales{
-        .sede{
+      .internacionales {
+        .sede {
           @include column;
           .iconoBandera {
             @include banderasMq;
@@ -119,7 +129,7 @@
           margin: 25px 0 10px 0;
         }
         .texto__intro {
-          width:$widthTotal - 10;
+          width: $widthTotal - 10;
           margin: 10px auto;
         }
         .contenedor__texto--derecha {
