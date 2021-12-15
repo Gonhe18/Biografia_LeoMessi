@@ -1,6 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bakbak+One&family=Fuzzy+Bubbles&family=Playfair+Display&family=Poppins:ital,wght@1,300&family=Quicksand:wght@400&display=swap");
-.flex_aCenter, .index .header__index, .index .contenedor-index, .index .contenedor-index .contenedorCard .tarjeta .descripcion, .index .contenedor-index .btn-index a:before, .index .contenedor-index .btn-index a:after, .contenedor, .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha,
-.contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda, .contenedor .premios .item {
+.flex_aCenter, .index .header__index, .index .contenedor-index, .index .contenedor-index .contenedorCard .tarjeta .descripcion, .index .contenedor-index .btn-index a:before, .index .contenedor-index .btn-index a:after, .contenedor, .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha, .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda, .contenedor .premios .item {
   display: flex;
   align-items: center;
   justify-content: center; }
