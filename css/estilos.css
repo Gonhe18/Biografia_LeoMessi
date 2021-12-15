@@ -135,7 +135,8 @@ h1, h2, h3, h4 {
         font-size: 1.2rem;
         transform-style: preserve-3d;
         transition: transform 0.25s;
-        transform: translateZ(-25px); }
+        transform: translateZ(-25px);
+        color: transparent; }
         .index .contenedor-index .btn-index a:before, .index .contenedor-index .btn-index a:after {
           width: 140px;
           height: 30px;

@@ -149,6 +149,7 @@
         transform-style: preserve-3d;
         transition: transform 0.25s;
         transform: translateZ(-25px);
+        color: transparent;
         &:before,
         &:after {
           @extend .flex_aCenter;
