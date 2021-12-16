@@ -1,18 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Bakbak+One&family=Fuzzy+Bubbles&family=Playfair+Display&family=Poppins:ital,wght@1,300&family=Quicksand:wght@400&display=swap");
-.flex_aCenter, .index .header__index, .index .contenedor-index, .index .contenedor-index .contenedorCard .tarjeta .descripcion, .index .contenedor-index .btn-index a:before, .index .contenedor-index .btn-index a:after, .contenedor, .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha, .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda, .contenedor .premios .item {
+.flex_aCenter, .index .header__index, .index .contenedor-index, .index .contenedor-index .contenedorCard .tarjeta .descripcion, .index .contenedor-index .btn-index a:before, .index .contenedor-index .btn-index a:after, .contenedor, .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha,
+.contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda, .contenedor .premios .item {
   display: flex;
   align-items: center;
   justify-content: center; }
+
 .grid_center, .index .contenedor-index .contenedorCard, .contenedor .premios .nacionales, .contenedor .premios .internacionales, .contenedor .premios .individuales {
   display: grid;
   text-align: center;
   grid-template-columns: repeat(4, 1fr); }
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box; }
+
 h1, h2, h3, h4 {
   text-align: center; }
+
 .index {
   background-image: url(../img/0.0-fondoIndex.jpg);
   background-repeat: no-repeat;
@@ -149,16 +154,19 @@ h1, h2, h3, h4 {
           transform: rotateX(90deg) translateZ(15px); }
         .index .contenedor-index .btn-index a:hover {
           transform: translateZ(-15px) rotateX(-90deg); }
+
 .nav-link {
   font-size: 1.2rem;
   font-weight: 400;
   margin: 0 15px; }
   .nav-link:hover {
     background-color: #ffffff23; }
+
 .imgLogo {
   width: 45px;
   margin-left: 50px;
   filter: invert(1); }
+
 .contenedor {
   width: 100%;
   flex-wrap: wrap;
@@ -214,11 +222,13 @@ h1, h2, h3, h4 {
       .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda .img__contenido--derecho {
         width: 50%;
         padding: 5px 5px; }
+
 .contenedor .titulo__contenido {
   font-size: 3rem;
   font-family: "Playfair Display", serif;
   margin-bottom: 20px;
   text-decoration: underline; }
+
 .contenedor .premios {
   width: 80%;
   margin: 15px auto; }
@@ -281,6 +291,7 @@ h1, h2, h3, h4 {
       grid-row: 17/20; }
     .contenedor .premios .individuales .x3:nth-of-type(34) {
       grid-row: 22/25; }
+
 .introForm {
   width: 95%;
   margin: auto; }
@@ -290,12 +301,14 @@ h1, h2, h3, h4 {
     width: 100%;
     padding: 0 5px;
     line-height: 1.3; }
+
 .formContacto {
   width: 70%;
   margin: auto; }
   .formContacto .btn-form {
     width: 30%;
     margin: 10px 0; }
+
 .footer-index p {
   font-size: 1.1rem;
   text-align: center;
@@ -310,6 +323,7 @@ h1, h2, h3, h4 {
     text-align: center;
     color: #fff;
     margin: 2px 0; }
+
 @media screen and (max-width: 690px) {
   /*    INDEX    */
   .index .header__index {
@@ -376,6 +390,7 @@ h1, h2, h3, h4 {
     width: 90%; }
     .formContacto .btn-form {
       width: 70%; } }
+
 @media screen and (max-width: 1024px) {
   /*    CARRERA     */
   .imgLogo {
