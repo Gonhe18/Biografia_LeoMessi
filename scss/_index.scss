@@ -44,8 +44,6 @@
         box-shadow: 2px 4px 10px #000;
         img {
           width: $widthTotal;
-          // @include sizes($widthTotal,100%);
-          // aspect-ratio: 1.78;
           vertical-align: top;
           opacity: 0;
         }
