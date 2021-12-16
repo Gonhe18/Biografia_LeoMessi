@@ -43,7 +43,7 @@
         overflow: hidden;
         box-shadow: 2px 4px 10px #000;
         img {
-          @include sizes($widthTotal,240px);
+          @include sizes($widthTotal,100%);
           vertical-align: top;
           opacity: 0;
         }
