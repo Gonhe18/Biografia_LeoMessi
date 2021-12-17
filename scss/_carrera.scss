@@ -1,16 +1,25 @@
 //  Header
-.nav-link {
-  font-size: $contenido;
-  font-weight: 400;
-  margin: 0 15px;
-  &:hover {
-    background-color: #ffffff23;
+.bandera{
+  background: $banderaArgentina;
+  .navbar-toggler{
+    border-color: $black;
+    .navbar-toggler-icon{
+      filter: invert(1);
+    }
   }
-}
-.imgLogo {
-  width: 45px;
-  margin-left: 50px;
-  filter: invert(1);
+  
+  .nav-link {
+    font-size: $contenido;
+    font-weight: 600;
+    margin: 0 15px;
+    &:hover {
+      background-color: #ffffff23;
+    }
+  }
+  .imgLogo {
+    width: 45px;
+    margin-left: 50px;
+  }
 }
 // Cuerpo de la web
 .contenedor {
