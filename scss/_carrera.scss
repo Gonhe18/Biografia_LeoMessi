@@ -1,19 +1,28 @@
 //  Header
-.bandera{
+.bandera {
   background: $banderaArgentina;
-  .navbar-toggler{
+  .navbar-toggler {
     border-color: $black;
-    .navbar-toggler-icon{
+    .navbar-toggler-icon {
       filter: invert(1);
     }
   }
-  
-  .nav-link {
-    font-size: $contenido;
-    font-weight: 600;
-    margin: 0 15px;
-    &:hover {
-      background-color: #ffffff23;
+  .collapse {
+    .navbar-nav {
+      .nav-link {
+        width: 130px;
+        font-size: $contenido;
+        font-weight: 600;
+        // margin: auto;
+        &:hover {
+          background-color: #68696931;
+        }
+      }
+      .active {
+        background-color: #0a9dce4b;
+        border: 1px solid rgba(0, 0, 0, 0.144);
+        border-radius: 5px;
+      }
     }
   }
   .imgLogo {
@@ -80,13 +89,13 @@
       .contenedor__texto--derecha {
         .img__contenido--izquierdo {
           order: -1;
-          width:$widthTotal * 0.5;
+          width: $widthTotal * 0.5;
           padding: 0 5px;
         }
       }
       .contenedor__texto--izquierda {
         .img__contenido--derecho {
-          width:$widthTotal * 0.5;
+          width: $widthTotal * 0.5;
           padding: 5px 5px;
         }
       }

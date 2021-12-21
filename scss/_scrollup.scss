@@ -1,0 +1,13 @@
+.scrollUp{
+   position: fixed;
+   bottom: 50px;
+   right: 3px;
+ }
+ .arrowUp{
+   opacity: 0.3;
+   transition: transform 1s;
+ }
+ .arrowUp:hover{
+   opacity: 1;
+   transform: scale(1.2);
+ }
