@@ -45,6 +45,19 @@
     }
   }
   /*    CARRERA     */
+  .collapse {
+    .navbar-nav {
+      .nav-link {
+        margin: auto;
+      }
+    }
+  }
+  .bandera {
+    .imgLogo {
+      width: 50px;
+      margin-left: 10px;
+    }
+  }
   .contenedor {
     .titulo__principal {
       font-size: $principal - 1;
@@ -108,10 +121,6 @@
 }
 @media screen and (max-width: 1024px) {
   /*    CARRERA     */
-  // Heaeder
-  .imgLogo {
-    margin-left: 25px;
-  }
   // Contenido
   .contenedor {
     .titulo__principal {
