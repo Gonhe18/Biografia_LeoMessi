@@ -1,7 +1,7 @@
 @media screen and (max-width: 690px) {
   /*    INDEX    */
   .index {
-    // Header
+    /* Header Index*/
     .header__index {
       margin-bottom: 10px;
       .imgLogo-index {
@@ -14,7 +14,7 @@
         padding-right: 10px;
       }
     }
-    // Cuerpo de la web
+    /* Cuerpo Index */
     .contenedor-index {
       .contenedorCard {
         @include column;
@@ -38,13 +38,14 @@
           }
         }
       }
-      // Botón
+      /* Botón Index*/
       .btn-index {
         margin-bottom: 5px;
       }
     }
   }
-  /*    CARRERA     */
+/*    CARRERA     */
+  /* Header*/
   .collapse {
     .navbar-nav {
       .nav-link {
@@ -58,6 +59,7 @@
       margin-left: 10px;
     }
   }
+  /* Cuerpo de la web*/
   .contenedor {
     .titulo__principal {
       font-size: $principal - 1;
@@ -76,16 +78,17 @@
       }
     }
   }
-  /*    PALMARES      */
-  // Estructura grid
+/*    PALMARES      */
+  /* Estructura grid */
   .contenedor {
     .premios {
       width: $widthTotal;
       padding: 0 10px;
-      // Encabezado Grid
+      /* Encabezado Grid */
       .encabezado h3 {
         font-size: $titPalmares - 0.5;
       }
+      /* Tablas Grid*/
       .item {
         flex-direction: column;
         p {
@@ -93,6 +96,7 @@
           margin: 0;
         }
       }
+      /* Iconos palmarés*/
       .nacionales {
         .pais {
           @include column;
@@ -111,7 +115,7 @@
       }
     }
   }
-  /*    CONTACTO      */
+/*  CONTACTO   */
   .formContacto {
     width: $widthTotal * 0.9;
     .btn-form {
@@ -120,8 +124,8 @@
   }
 }
 @media screen and (max-width: 1024px) {
-  /*    CARRERA     */
-  // Contenido
+/*    CARRERA     */
+  /* Contenido */
   .contenedor {
     .titulo__principal {
       font-size: $principal - 1;

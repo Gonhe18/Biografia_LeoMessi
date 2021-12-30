@@ -1,4 +1,4 @@
-// Body
+/* Body Index*/
 .index {
   background-image: url(../img/0.0-fondoIndex.jpg);
   background-repeat: no-repeat;
@@ -8,7 +8,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  // Header
+  /* Header Index */
   .header__index {
     @extend .flex_aCenter;
     justify-content: space-between;
@@ -25,7 +25,7 @@
       padding-right: 20px;
     }
   }
-  //  Cuerpo de la web
+  /* Cuerpo Index */
   .contenedor-index {
     @extend .flex_aCenter;
     width: $widthTotal;
@@ -34,7 +34,7 @@
       @extend .grid_center;
       @include sizes($widthTotal,80vh);
       grid-template-columns: repeat(2, 1fr);
-      // Card
+      /* Card */
       .tarjeta {
         @include sizes(($widthTotal*0.8),90%);
         margin: auto;
@@ -47,7 +47,7 @@
           vertical-align: top;
           opacity: 0;
         }
-        //  Efectos card
+        /*  Efectos card */
         .over_pic {
           @include sizes(($widthTotal/2),50%);
           position: absolute;
@@ -103,6 +103,7 @@
         .pic4 {
           background-image: url(../img/4.0-palmares_index.jpg);
         }
+        /* Descripción card*/
         .descripcion {
           @extend .flex_aCenter;
           position: absolute;
@@ -138,7 +139,7 @@
         }
       }
     }
-    // Botón
+    /* Botón Index */
     .btn-index {
       @include sizes(140px,30px);
       position: relative;

@@ -1,4 +1,4 @@
-//  Header
+/*Header*/
 .bandera {
   background: $banderaArgentina;
   .navbar-toggler {
@@ -13,9 +13,9 @@
         width: 130px;
         font-size: $contenido;
         font-weight: 600;
-        // margin: auto;
         &:hover {
           background-color: #68696931;
+          border-radius: 5px;
         }
       }
       .active {
@@ -30,7 +30,7 @@
     margin-left: 50px;
   }
 }
-// Cuerpo de la web
+/* Cuerpo de la web */
 .contenedor {
   @extend .flex_aCenter;
   width: $widthTotal;
@@ -75,7 +75,7 @@
         p {
           font-size: $contenido;
           font-family: $textos;
-          padding: 5px 10px;
+          padding: 0 10px;
           line-height: $interlineado;
           margin: 0 auto;
           cite {
