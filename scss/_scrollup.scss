@@ -1,13 +1,21 @@
-.scrollUp{
-   position: fixed;
-   bottom: 50px;
-   right: 3px;
- }
- .arrowUp{
-   opacity: 0.3;
-   transition: transform 1s;
- }
- .arrowUp:hover{
-   opacity: 1;
-   transform: scale(1.2);
- }
+/* Scroll Up */
+.up{
+  position: fixed;
+  bottom: 45px;
+  right: -70px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  i{
+    font-size: 35px;
+    color: rgba(0, 0, 0, 0.212);
+    transition: all 0.5 ;
+    &:hover{
+      transform: scale(1.2);
+      transition: all .5s;
+      color: #000;
+    }
+  }
+  &.show{
+    right: 5px;
+  }
+}

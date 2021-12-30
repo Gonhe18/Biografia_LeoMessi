@@ -1,4 +1,4 @@
-// Estructura principal del Grid
+/* Estructura principal del Grid */
 .contenedor {
   .titulo__contenido {
     font-size: $secundario;
@@ -6,6 +6,7 @@
     margin-bottom: 20px;
     text-decoration: underline;
   }
+  /* Tablas Grid*/
   .premios {
     width: $widthTotal * 0.8;
     margin: 15px auto;
