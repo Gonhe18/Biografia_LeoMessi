@@ -344,3 +344,95 @@
     }
   }
 }
+
+@media screen and (min-width: 1400px) {
+  /*    INDEX    */
+  .index {
+    /* Header Index*/
+    .header__index {
+      .imgLogo-index {
+        width: 80px;
+      }
+      h1 {
+        font-size: $principal + 1;
+        padding-right: 10px;
+      }
+    }
+
+    /* Cuerpo Index */
+    main {
+      .contenedor-index {
+        .contenedorCard {
+          height: 90%;
+          .tarjeta {
+            h2 {
+              font-size: $secundario;
+            }
+            .descripcion {
+              padding: 0 5px;
+
+              h3 {
+                font-size: $secundario;
+              }
+              p {
+                font-size: $contenido + 0.3;
+                line-height: $interlineado;
+              }
+            }
+          }
+        }
+        /* Botón Index*/
+        .btn-index {
+          height: 5%;
+          a {
+            &:before,
+            &:after {
+              @include sizes(175px, 50px);
+              font-size: $contenido + 0.5;
+            }
+          }
+        }
+      }
+    }
+    /* Footer index */
+    .footer-index {
+      p {
+        font-size: $contenido + 0.2;
+      }
+    }
+  }
+
+  /*    CARRERA     */
+  /* Header*/
+  .header {
+    .navbar {
+      .navbar-toggler {
+        font-size: $contenido + 1;
+      }
+      .collapse {
+        .navbar-nav {
+          .nav-link {
+            width: 150px;
+            font-size: $contenido + 0.5;
+          }
+        }
+      }
+      .imgLogo {
+        width: 75px;
+      }
+    }
+  }
+  /* Contenido */
+  .contenedor {
+    .cajaSeccion {
+      .cajaContenido {
+        .contenedor__texto--derecha,
+        .contenedor__texto--izquierda {
+          p {
+            font-size: $contenido + 0.1;
+          }
+        }
+      }
+    }
+  }
+}

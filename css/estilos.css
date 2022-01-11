@@ -597,3 +597,49 @@ h1, h2, h3, h4 {
         font-size: 1.4rem; }
       .contacto main .contenedorContacto .formContacto .btn-form {
         width: 70%; } }
+
+@media screen and (min-width: 1400px) {
+  /*    INDEX    */
+  .index {
+    /* Header Index*/
+    /* Cuerpo Index */
+    /* Footer index */ }
+    .index .header__index .imgLogo-index {
+      width: 80px; }
+    .index .header__index h1 {
+      font-size: 5rem;
+      padding-right: 10px; }
+    .index main .contenedor-index {
+      /* Botón Index*/ }
+      .index main .contenedor-index .contenedorCard {
+        height: 90%; }
+        .index main .contenedor-index .contenedorCard .tarjeta h2 {
+          font-size: 3rem; }
+        .index main .contenedor-index .contenedorCard .tarjeta .descripcion {
+          padding: 0 5px; }
+          .index main .contenedor-index .contenedorCard .tarjeta .descripcion h3 {
+            font-size: 3rem; }
+          .index main .contenedor-index .contenedorCard .tarjeta .descripcion p {
+            font-size: 1.5rem;
+            line-height: 1.3; }
+      .index main .contenedor-index .btn-index {
+        height: 5%; }
+        .index main .contenedor-index .btn-index a:before, .index main .contenedor-index .btn-index a:after {
+          width: 175px;
+          height: 50px;
+          font-size: 1.7rem; }
+    .index .footer-index p {
+      font-size: 1.4rem; }
+  /*    CARRERA     */
+  /* Header*/
+  .header .navbar .navbar-toggler {
+    font-size: 2.2rem; }
+  .header .navbar .collapse .navbar-nav .nav-link {
+    width: 150px;
+    font-size: 1.7rem; }
+  .header .navbar .imgLogo {
+    width: 75px; }
+  /* Contenido */
+  .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha p,
+  .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda p {
+    font-size: 1.3rem; } }
