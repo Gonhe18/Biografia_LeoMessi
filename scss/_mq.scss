@@ -1,6 +1,7 @@
 @media screen and (max-width: 690px) {
   /*    INDEX    */
   .index {
+    height: 100%;
     /* Header Index*/
     .header__index {
       margin-bottom: 10px;
@@ -15,36 +16,42 @@
       }
     }
     /* Cuerpo Index */
-    .contenedor-index {
-      .contenedorCard {
-        @include column;
-        width: $widthTotal * 0.9;
-        min-height: 740px;
-        .tarjeta {
-          width: $widthTotal;
-          margin-bottom: 15px;
-          min-height: 170px;
-          .descripcion {
-            padding: 0 5px;
-
+    main {
+      .contenedor-index {
+        .contenedorCard {
+          @include column;
+          width: $widthTotal * 0.9;
+          height: 100%;
+          .tarjeta {
+            width: $widthTotal;
+            margin-bottom: 15px;
+            min-height: 170px;
             h2 {
-              font-size: $secundario - 1.5;
-              margin-top: 5px;
+              width: 100%;
+              font-size: 1.5rem;
             }
-            p {
-              font-size: $contenido - 0.2;
-              line-height: $interlineado;
+            .descripcion {
+              padding: 0 5px;
+
+              h3 {
+                font-size: $secundario - 1.5;
+                margin-top: 5px;
+              }
+              p {
+                font-size: $contenido - 0.2;
+                line-height: $interlineado;
+              }
             }
           }
         }
-      }
-      /* Botón Index*/
-      .btn-index {
-        margin-bottom: 5px;
+        /* Botón Index*/
+        .btn-index {
+          margin-bottom: 5px;
+        }
       }
     }
   }
-/*    CARRERA     */
+  /*    CARRERA     */
   /* Header*/
   .collapse {
     .navbar-nav {
@@ -53,7 +60,7 @@
       }
     }
   }
-  .bandera {
+  .banderaHeader {
     .imgLogo {
       width: 50px;
       margin-left: 10px;
@@ -61,28 +68,44 @@
   }
   /* Cuerpo de la web*/
   .contenedor {
-    .titulo__principal {
-      font-size: $principal - 1;
-    }
-    .titulo__contenido {
-      font-size: $secundario - 1;
-    }
     .cajaSeccion {
       .cajaContenido {
+        .texto__intro {
+          font-size: $contenido;
+          width: $widthTotal * 0.95;
+        }
         .contenedor__texto--derecha,
         .contenedor__texto--izquierda {
-          iframe {
-            height: 300px;
+          flex-direction: column;
+          .texto__contenido {
+            width: $widthTotal;
+            padding: 0;
+          }
+          p {
+            font-size: $contenido;
+            width: $widthTotal * 0.95;
+          }
+        }
+        .contenedor__texto--derecha {
+          .img__contenido--izquierdo {
+            order: 0;
+            width: $widthTotal * 0.9;
+            padding: 10px 0;
+          }
+        }
+        .contenedor__texto--izquierda {
+          .img__contenido--derecho {
+            width: $widthTotal * 0.9;
+            padding: 10px 0;
           }
         }
       }
     }
   }
-/*    PALMARES      */
+  /*    PALMARES      */
   /* Estructura grid */
   .contenedor {
     .premios {
-      width: $widthTotal;
       padding: 0 10px;
       /* Encabezado Grid */
       .encabezado h3 {
@@ -115,61 +138,206 @@
       }
     }
   }
-/*  CONTACTO   */
-  .formContacto {
-    width: $widthTotal * 0.9;
-    .btn-form {
-      width: $widthTotal * 0.7;
+  /*  CONTACTO   */
+  .contacto {
+    main {
+      .contenedorContacto {
+        height: 100%;
+        .formContacto {
+          width: $widthTotal * 0.9;
+          .btn-form {
+            width: $widthTotal * 0.7;
+          }
+        }
+      }
     }
   }
 }
-@media screen and (max-width: 1024px) {
-/*    CARRERA     */
+
+@media screen and (min-width: 691px) and (max-width: 991px) {
+  /*    INDEX    */
+  .index {
+    /* Header Index*/
+    .header__index {
+      .imgLogo-index {
+        width: 70px;
+      }
+      h1 {
+        font-size: $principal;
+        padding-right: 10px;
+      }
+    }
+
+    /* Cuerpo Index */
+    main {
+      .contenedor-index {
+        .contenedorCard {
+          height: 90%;
+          .tarjeta {
+            width: $widthTotal * 0.95;
+            height: 85%;
+            h2 {
+              width: 100%;
+              font-size: $secundario;
+            }
+            .descripcion {
+              padding: 0 5px;
+
+              h3 {
+                font-size: $secundario;
+              }
+              p {
+                font-size: $contenido + 0.3;
+                line-height: $interlineado;
+              }
+            }
+          }
+        }
+      }
+    }
+    /* Footer index */
+    .footer-index {
+      p {
+        font-size: $contenido + 0.2;
+      }
+    }
+  }
+  /*    CARRERA     */
+  /* Header*/
+  .header {
+    .navbar {
+      .navbar-toggler {
+        font-size: $contenido + 1;
+      }
+      .collapse {
+        .navbar-nav {
+          .nav-link {
+            width: 100%;
+            margin: auto;
+            font-size: $contenido + 1;
+          }
+        }
+      }
+      .imgLogo {
+        width: 75px;
+        margin-left: 20px;
+      }
+    }
+  }
   /* Contenido */
   .contenedor {
-    .titulo__principal {
-      font-size: $principal - 1;
-    }
     .cajaSeccion {
-      margin: 5px auto;
-      .titulo__contenido {
-        font-size: $secundario * 0.6;
-        margin-bottom: 10px;
-      }
       .cajaContenido {
-        .tituloSeccion {
-          font-size: $titSeccion * 0.7;
-          margin: 25px 0 10px 0;
-        }
-        .texto__intro {
-          width: $widthTotal - 10;
-          margin: 10px auto;
-        }
-        .contenedor__texto--derecha {
-          flex-direction: column;
-          .texto__contenido {
-            width: $widthTotal;
-            padding: 0;
-          }
-          p {
-            width: $widthTotal * 0.95;
-          }
-          .img__contenido--izquierdo {
-            order: 0;
-            width: $widthTotal * 0.9;
-          }
-        }
+        .contenedor__texto--derecha,
         .contenedor__texto--izquierda {
           flex-direction: column;
           .texto__contenido {
             width: $widthTotal;
-            padding: 0;
           }
-          p {
+        }
+        .contenedor__texto--derecha {
+          .img__contenido--izquierdo {
+            order: 0;
             width: $widthTotal * 0.95;
+            padding: 10px 0;
           }
+        }
+        .contenedor__texto--izquierda {
           .img__contenido--derecho {
-            width: $widthTotal * 0.9;
+            width: $widthTotal * 0.95;
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+  }
+
+  /*    PALMARES      */
+  /* Estructura grid */
+  .contenedor {
+    .premios {
+      width: $widthTotal * 0.9;
+      .nacionales {
+        .pais {
+          @include column;
+          .iconoBandera {
+            @include banderasMq;
+          }
+        }
+      }
+      .internacionales {
+        .sede {
+          @include column;
+          .iconoBandera {
+            @include banderasMq;
+          }
+        }
+      }
+    }
+  }
+
+  /*  CONTACTO   */
+  .contacto {
+    main {
+      min-height: 100%;
+      .contenedorContacto {
+        height: 90%;
+        .introForm {
+          .txtContacto {
+            font-size: $contenido + 0.2;
+            padding: 50px 0;
+          }
+        }
+        .formContacto {
+          width: $widthTotal * 0.9;
+          padding-top: 70px;
+
+          label,
+          input,
+          select,
+          textarea,
+          button {
+            font-size: $contenido + 0.2;
+          }
+          .btn-form {
+            width: $widthTotal * 0.7;
+          }
+        }
+      }
+    }
+  }
+  .footer {
+    p {
+      font-size: $contenido + 0.2;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /*  CONTACTO   */
+  .contacto {
+    main {
+      min-height: 100%;
+      .contenedorContacto {
+        .introForm {
+          .txtContacto {
+            font-size: $contenido + 0.2;
+            padding: 50px 0;
+          }
+        }
+        .formContacto {
+          width: $widthTotal * 0.9;
+          padding-top: 50px;
+
+          label,
+          input,
+          select,
+          textarea,
+          button {
+            font-size: $contenido + 0.2;
+          }
+          .btn-form {
+            width: $widthTotal * 0.7;
           }
         }
       }

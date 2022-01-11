@@ -1,5 +1,5 @@
 /*Header*/
-.bandera {
+.banderaHeader {
   background: $banderaArgentina;
   .navbar-toggler {
     border-color: $black;
@@ -37,10 +37,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   .titulo__principal {
-    font-size: $principal;
-    font-family: $tituloPrincipal;
-    width: $widthTotal;
-    margin: 15px 0;
+    @extend .titulo_principal;
   }
   .cajaSeccion {
     width: $widthTotal * 0.95;
@@ -54,12 +51,10 @@
     .cajaContenido {
       width: $widthTotal;
       .texto__intro {
-        font-size: $contenido;
-        font-family: $textos;
-        line-height: $interlineado;
+        @extend .textos;
       }
       .tituloSeccion {
-        font-size: $titSeccion;
+        font-size: $titSeccion + 0.3;
         font-family: $tituloSeccion;
         width: $widthTotal;
         margin: 30px 0;
@@ -73,16 +68,16 @@
           width: $widthTotal * 0.5;
         }
         p {
-          font-size: $contenido;
-          font-family: $textos;
-          padding: 0 10px;
-          line-height: $interlineado;
-          margin: 0 auto;
+          @extend .textos;
           cite {
-            color: rgb(70, 66, 66);
+            color: rgb(95, 92, 92);
           }
         }
+        img {
+          margin: 10px 0;
+        }
         iframe {
+          margin: 10px 0;
           height: 400px;
         }
       }
