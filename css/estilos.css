@@ -1,15 +1,29 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bakbak+One&family=Fuzzy+Bubbles&family=Playfair+Display&family=Poppins:ital,wght@1,300&family=Quicksand:wght@400&display=swap");
-.flex_aCenter, .index .header__index, .index .contenedor-index, .index .contenedor-index .contenedorCard .tarjeta .descripcion, .index .contenedor-index .btn-index a:before, .index .contenedor-index .btn-index a:after, .contenedor, .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha,
-.contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda, .contenedor .premios .item {
+.flex_aCenter, .index .header__index, .index main .contenedor-index, .index main .contenedor-index .contenedorCard .tarjeta .descripcion, .index main .contenedor-index .btn-index a:before, .index main .contenedor-index .btn-index a:after, .contenedor, .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha,
+.contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda, .contenedor .premios .item, .contacto main .contenedorContacto {
   display: flex;
   align-items: center;
   justify-content: center; }
 
-.grid_center, .index .contenedor-index .contenedorCard, .contenedor .premios .nacionales, .contenedor .premios .internacionales, .contenedor .premios .individuales {
+.grid_center, .index main .contenedor-index .contenedorCard, .contenedor .premios .nacionales, .contenedor .premios .internacionales, .contenedor .premios .individuales {
   display: grid;
   text-align: center;
   grid-template-columns: repeat(4, 1fr); }
+
+.titulo_principal, .contenedor .titulo__principal, .contacto main .contenedorContacto .titulo__principal {
+  font-size: 4rem;
+  font-family: "Bakbak One", cursive;
+  width: 100%;
+  margin: 15px 0; }
+
+.textos, .contenedor .cajaSeccion .cajaContenido .texto__intro, .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha p,
+.contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda p {
+  font-size: 1.2rem;
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.3;
+  padding: 0 10px;
+  margin: 0 auto; }
 
 * {
   padding: 0;
@@ -44,7 +58,7 @@ h1, h2, h3, h4 {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   /* Header Index */
@@ -61,144 +75,159 @@ h1, h2, h3, h4 {
       font-family: "Playfair Display", serif;
       text-align: right;
       padding-right: 20px; }
-  .index .contenedor-index {
-    width: 100%;
-    flex-direction: column;
-    /* Botón Index */ }
-    .index .contenedor-index .contenedorCard {
+  .index main {
+    height: 100%; }
+    .index main .contenedor-index {
       width: 100%;
-      height: 80vh;
-      grid-template-columns: repeat(2, 1fr);
-      /* Card */ }
-      .index .contenedor-index .contenedorCard .tarjeta {
-        width: 80%;
-        height: 90%;
-        margin: auto;
+      flex-direction: column;
+      height: 100%;
+      /* Botón Index */ }
+      .index main .contenedor-index .contenedorCard {
+        width: 100%;
+        height: 80vh;
+        grid-template-columns: repeat(2, 1fr);
+        /* Card */ }
+        .index main .contenedor-index .contenedorCard .tarjeta {
+          width: 80%;
+          height: 90%;
+          margin: auto;
+          position: relative;
+          background: rgba(255, 255, 255, 0.363);
+          overflow: hidden;
+          box-shadow: 2px 4px 10px #000;
+          /*  Efectos card */
+          /* Descripción card*/ }
+          .index main .contenedor-index .contenedorCard .tarjeta h2 {
+            position: absolute;
+            top: 0;
+            right: 0;
+            text-align: end;
+            margin: 0 10px;
+            font-family: "Poppins", sans-serif;
+            font-size: 2rem;
+            z-index: 3;
+            color: #fff; }
+          .index main .contenedor-index .contenedorCard .tarjeta img {
+            width: 100%;
+            vertical-align: top;
+            opacity: 0; }
+          .index main .contenedor-index .contenedorCard .tarjeta .over_pic {
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            background-size: 200% 200%;
+            transition: all 0.7s ease-out;
+            z-index: 2; }
+            .index main .contenedor-index .contenedorCard .tarjeta .over_pic:nth-of-type(1) {
+              left: 0;
+              top: 0;
+              background-position: left top; }
+            .index main .contenedor-index .contenedorCard .tarjeta .over_pic:nth-of-type(2) {
+              right: 0;
+              top: 0;
+              background-position: right top; }
+            .index main .contenedor-index .contenedorCard .tarjeta .over_pic:nth-of-type(3) {
+              left: 0;
+              bottom: 0;
+              background-position: left bottom; }
+            .index main .contenedor-index .contenedorCard .tarjeta .over_pic:nth-of-type(4) {
+              right: 0;
+              bottom: 0;
+              background-position: right bottom; }
+          .index main .contenedor-index .contenedorCard .tarjeta:hover h2 {
+            display: none; }
+          .index main .contenedor-index .contenedorCard .tarjeta:hover .over_pic:nth-of-type(1) {
+            transform: translate(-100%, -100%); }
+          .index main .contenedor-index .contenedorCard .tarjeta:hover .over_pic:nth-of-type(2) {
+            transform: translate(100%, -100%); }
+          .index main .contenedor-index .contenedorCard .tarjeta:hover .over_pic:nth-of-type(3) {
+            transform: translate(-100%, 100%); }
+          .index main .contenedor-index .contenedorCard .tarjeta:hover .over_pic:nth-of-type(4) {
+            transform: translate(100%, 100%); }
+          .index main .contenedor-index .contenedorCard .tarjeta .pic1 {
+            background-image: url(../img/1.0-comienzos_index.jpg); }
+          .index main .contenedor-index .contenedorCard .tarjeta .pic2 {
+            background-image: url(../img/2.0-club_index.jpg); }
+          .index main .contenedor-index .contenedorCard .tarjeta .pic3 {
+            background-image: url(../img/3.0-seleccion_index.jpg); }
+          .index main .contenedor-index .contenedorCard .tarjeta .pic4 {
+            background-image: url(../img/4.0-palmares_index.jpg); }
+          .index main .contenedor-index .contenedorCard .tarjeta .descripcion {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            align-content: center;
+            flex-wrap: wrap;
+            transition: all 0.7s ease-out;
+            transform: scale(0.6);
+            opacity: 0;
+            text-decoration: none;
+            color: #000; }
+            .index main .contenedor-index .contenedorCard .tarjeta .descripcion h3 {
+              font-size: 3rem;
+              font-family: "Poppins", sans-serif; }
+            .index main .contenedor-index .contenedorCard .tarjeta .descripcion p {
+              font-size: 1.2rem;
+              font-family: "Quicksand", sans-serif;
+              color: #000;
+              text-align: center;
+              line-height: 1.3;
+              padding: 10px;
+              font-weight: bold; }
+          .index main .contenedor-index .contenedorCard .tarjeta:hover .descripcion {
+            opacity: 1;
+            transform: scale(1); }
+      .index main .contenedor-index .btn-index {
+        width: 140px;
+        height: 30px;
         position: relative;
-        background: rgba(255, 255, 255, 0.363);
-        overflow: hidden;
-        box-shadow: 2px 4px 10px #000;
-        /*  Efectos card */
-        /* Descripción card*/ }
-        .index .contenedor-index .contenedorCard .tarjeta img {
-          width: 100%;
-          vertical-align: top;
-          opacity: 0; }
-        .index .contenedor-index .contenedorCard .tarjeta .over_pic {
-          width: 50%;
-          height: 50%;
-          position: absolute;
-          background-size: 200% 200%;
-          transition: all 0.7s ease-out;
-          z-index: 2; }
-          .index .contenedor-index .contenedorCard .tarjeta .over_pic:nth-of-type(1) {
-            left: 0;
-            top: 0;
-            background-position: left top; }
-          .index .contenedor-index .contenedorCard .tarjeta .over_pic:nth-of-type(2) {
-            right: 0;
-            top: 0;
-            background-position: right top; }
-          .index .contenedor-index .contenedorCard .tarjeta .over_pic:nth-of-type(3) {
-            left: 0;
-            bottom: 0;
-            background-position: left bottom; }
-          .index .contenedor-index .contenedorCard .tarjeta .over_pic:nth-of-type(4) {
-            right: 0;
-            bottom: 0;
-            background-position: right bottom; }
-        .index .contenedor-index .contenedorCard .tarjeta:hover .over_pic:nth-of-type(1) {
-          transform: translate(-100%, -100%); }
-        .index .contenedor-index .contenedorCard .tarjeta:hover .over_pic:nth-of-type(2) {
-          transform: translate(100%, -100%); }
-        .index .contenedor-index .contenedorCard .tarjeta:hover .over_pic:nth-of-type(3) {
-          transform: translate(-100%, 100%); }
-        .index .contenedor-index .contenedorCard .tarjeta:hover .over_pic:nth-of-type(4) {
-          transform: translate(100%, 100%); }
-        .index .contenedor-index .contenedorCard .tarjeta .pic1 {
-          background-image: url(../img/1.0-comienzos_index.jpg); }
-        .index .contenedor-index .contenedorCard .tarjeta .pic2 {
-          background-image: url(../img/2.0-club_index.jpg); }
-        .index .contenedor-index .contenedorCard .tarjeta .pic3 {
-          background-image: url(../img/3.0-seleccion_index.jpg); }
-        .index .contenedor-index .contenedorCard .tarjeta .pic4 {
-          background-image: url(../img/4.0-palmares_index.jpg); }
-        .index .contenedor-index .contenedorCard .tarjeta .descripcion {
-          position: absolute;
-          left: 0;
-          top: 0;
-          right: 0;
-          bottom: 0;
-          align-content: center;
-          flex-wrap: wrap;
-          transition: all 0.7s ease-out;
-          transform: scale(0.6);
-          opacity: 0;
-          text-decoration: none;
-          color: #000; }
-          .index .contenedor-index .contenedorCard .tarjeta .descripcion h2 {
-            font-size: 3rem;
-            font-family: "Poppins", sans-serif; }
-          .index .contenedor-index .contenedorCard .tarjeta .descripcion p {
-            font-size: 1.2rem;
-            font-family: "Quicksand", sans-serif;
+        display: inline-flex;
+        perspective: 1000px; }
+        .index main .contenedor-index .btn-index a {
+          font-size: 1.2rem;
+          transform-style: preserve-3d;
+          transition: transform 0.25s;
+          transform: translateZ(-25px);
+          color: transparent; }
+          .index main .contenedor-index .btn-index a:before, .index main .contenedor-index .btn-index a:after {
+            width: 140px;
+            height: 30px;
+            position: absolute;
+            content: "Contacto";
+            box-sizing: border-box;
+            border: 2px solid #000;
+            border-radius: 20px; }
+          .index main .contenedor-index .btn-index a:before {
+            color: #fff;
+            background: #000;
+            transform: rotateY(0) translateZ(15px); }
+          .index main .contenedor-index .btn-index a:after {
             color: #000;
-            text-align: center;
-            line-height: 1.3;
-            padding: 10px;
-            font-weight: bold; }
-        .index .contenedor-index .contenedorCard .tarjeta:hover .descripcion {
-          opacity: 1;
-          transform: scale(1); }
-    .index .contenedor-index .btn-index {
-      width: 140px;
-      height: 30px;
-      position: relative;
-      display: inline-flex;
-      perspective: 1000px; }
-      .index .contenedor-index .btn-index a {
-        font-size: 1.2rem;
-        transform-style: preserve-3d;
-        transition: transform 0.25s;
-        transform: translateZ(-25px);
-        color: transparent; }
-        .index .contenedor-index .btn-index a:before, .index .contenedor-index .btn-index a:after {
-          width: 140px;
-          height: 30px;
-          position: absolute;
-          content: "Contacto";
-          box-sizing: border-box;
-          border: 2px solid #000;
-          border-radius: 20px; }
-        .index .contenedor-index .btn-index a:before {
-          color: #fff;
-          background: #000;
-          transform: rotateY(0) translateZ(15px); }
-        .index .contenedor-index .btn-index a:after {
-          color: #000;
-          transform: rotateX(90deg) translateZ(15px); }
-        .index .contenedor-index .btn-index a:hover {
-          transform: translateZ(-15px) rotateX(-90deg); }
+            transform: rotateX(90deg) translateZ(15px); }
+          .index main .contenedor-index .btn-index a:hover {
+            transform: translateZ(-15px) rotateX(-90deg); }
 
 /*Header*/
-.bandera {
+.banderaHeader {
   background: linear-gradient(to bottom, #00aae4, #6fb7ed, #a0c5f3, #e2e5fa, #e2e5fa, #a0c5f3, #6fb7ed, #00aae4); }
-  .bandera .navbar-toggler {
+  .banderaHeader .navbar-toggler {
     border-color: #000; }
-    .bandera .navbar-toggler .navbar-toggler-icon {
+    .banderaHeader .navbar-toggler .navbar-toggler-icon {
       filter: invert(1); }
-  .bandera .collapse .navbar-nav .nav-link {
+  .banderaHeader .collapse .navbar-nav .nav-link {
     width: 130px;
     font-size: 1.2rem;
     font-weight: 600; }
-    .bandera .collapse .navbar-nav .nav-link:hover {
+    .banderaHeader .collapse .navbar-nav .nav-link:hover {
       background-color: #68696931;
       border-radius: 5px; }
-  .bandera .collapse .navbar-nav .active {
+  .banderaHeader .collapse .navbar-nav .active {
     background-color: #0a9dce4b;
     border: 1px solid rgba(0, 0, 0, 0.144);
     border-radius: 5px; }
-  .bandera .imgLogo {
+  .banderaHeader .imgLogo {
     width: 45px;
     margin-left: 50px; }
 
@@ -207,11 +236,6 @@ h1, h2, h3, h4 {
   width: 100%;
   flex-wrap: wrap;
   justify-content: space-between; }
-  .contenedor .titulo__principal {
-    font-size: 4rem;
-    font-family: "Bakbak One", cursive;
-    width: 100%;
-    margin: 15px 0; }
   .contenedor .cajaSeccion {
     width: 95%;
     margin: 10px auto; }
@@ -222,12 +246,8 @@ h1, h2, h3, h4 {
       text-decoration: underline; }
     .contenedor .cajaSeccion .cajaContenido {
       width: 100%; }
-      .contenedor .cajaSeccion .cajaContenido .texto__intro {
-        font-size: 1.2rem;
-        font-family: "Quicksand", sans-serif;
-        line-height: 1.3; }
       .contenedor .cajaSeccion .cajaContenido .tituloSeccion {
-        font-size: 2rem;
+        font-size: 2.3rem;
         font-family: "Poppins", sans-serif;
         width: 100%;
         margin: 30px 0; }
@@ -238,18 +258,15 @@ h1, h2, h3, h4 {
         .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha .texto__contenido,
         .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda .texto__contenido {
           width: 50%; }
-        .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha p,
-        .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda p {
-          font-size: 1.2rem;
-          font-family: "Quicksand", sans-serif;
-          padding: 0 10px;
-          line-height: 1.3;
-          margin: 0 auto; }
-          .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha p cite,
-          .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda p cite {
-            color: #464242; }
+        .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha p cite,
+        .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda p cite {
+          color: #5f5c5c; }
+        .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha img,
+        .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda img {
+          margin: 10px 0; }
         .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha iframe,
         .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda iframe {
+          margin: 10px 0;
           height: 400px; }
       .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha .img__contenido--izquierdo {
         order: -1;
@@ -268,7 +285,7 @@ h1, h2, h3, h4 {
     margin-bottom: 20px;
     text-decoration: underline; }
   .contenedor .premios {
-    width: 80%;
+    width: 90%;
     margin: 15px auto; }
     .contenedor .premios .encabezado {
       border: solid 2px #000; }
@@ -280,7 +297,7 @@ h1, h2, h3, h4 {
     .contenedor .premios .item {
       border: solid 2px #000; }
       .contenedor .premios .item p {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         margin: 5px; }
     .contenedor .premios .nacionales .fondoNac {
       background-color: #000080;
@@ -331,22 +348,26 @@ h1, h2, h3, h4 {
         grid-row: 22/25; }
 
 /* Contacto */
-.introForm {
-  width: 95%;
-  margin: auto; }
-  .introForm .txtContacto {
-    font-size: 1.2rem;
-    font-family: "Quicksand", sans-serif;
-    width: 100%;
-    padding: 0 5px;
-    line-height: 1.3; }
-
-.formContacto {
-  width: 70%;
-  margin: auto; }
-  .formContacto .btn-form {
-    width: 30%;
-    margin: 10px 0; }
+.contacto {
+  height: 100vh; }
+  .contacto main .contenedorContacto {
+    flex-direction: column;
+    width: 100%; }
+    .contacto main .contenedorContacto .introForm {
+      width: 95%;
+      margin: 0 auto; }
+      .contacto main .contenedorContacto .introForm .txtContacto {
+        font-size: 1.2rem;
+        font-family: "Quicksand", sans-serif;
+        width: 100%;
+        padding: 0 5px;
+        line-height: 1.3; }
+    .contacto main .contenedorContacto .formContacto {
+      width: 70%;
+      margin: 0 auto; }
+      .contacto main .contenedorContacto .formContacto .btn-form {
+        width: 30%;
+        margin: 10px 0; }
 
 /* Footer index */
 .footer-index p {
@@ -368,6 +389,7 @@ h1, h2, h3, h4 {
 @media screen and (max-width: 690px) {
   /*    INDEX    */
   .index {
+    height: 100%;
     /* Header Index*/
     /* Cuerpo Index */ }
     .index .header__index {
@@ -379,46 +401,62 @@ h1, h2, h3, h4 {
         width: 70%;
         font-size: 1.8rem;
         padding-right: 10px; }
-    .index .contenedor-index {
+    .index main .contenedor-index {
       /* Botón Index*/ }
-      .index .contenedor-index .contenedorCard {
+      .index main .contenedor-index .contenedorCard {
         display: flex;
         flex-direction: column;
         width: 90%;
-        min-height: 740px; }
-        .index .contenedor-index .contenedorCard .tarjeta {
+        height: 100%; }
+        .index main .contenedor-index .contenedorCard .tarjeta {
           width: 100%;
           margin-bottom: 15px;
           min-height: 170px; }
-          .index .contenedor-index .contenedorCard .tarjeta .descripcion {
+          .index main .contenedor-index .contenedorCard .tarjeta h2 {
+            width: 100%;
+            font-size: 1.5rem; }
+          .index main .contenedor-index .contenedorCard .tarjeta .descripcion {
             padding: 0 5px; }
-            .index .contenedor-index .contenedorCard .tarjeta .descripcion h2 {
+            .index main .contenedor-index .contenedorCard .tarjeta .descripcion h3 {
               font-size: 1.5rem;
               margin-top: 5px; }
-            .index .contenedor-index .contenedorCard .tarjeta .descripcion p {
+            .index main .contenedor-index .contenedorCard .tarjeta .descripcion p {
               font-size: 1rem;
               line-height: 1.3; }
-      .index .contenedor-index .btn-index {
+      .index main .contenedor-index .btn-index {
         margin-bottom: 5px; }
   /*    CARRERA     */
   /* Header*/
   .collapse .navbar-nav .nav-link {
     margin: auto; }
-  .bandera .imgLogo {
+  .banderaHeader .imgLogo {
     width: 50px;
     margin-left: 10px; }
   /* Cuerpo de la web*/
-  .contenedor .titulo__principal {
-    font-size: 3rem; }
-  .contenedor .titulo__contenido {
-    font-size: 2rem; }
-  .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha iframe,
-  .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda iframe {
-    height: 300px; }
+  .contenedor .cajaSeccion .cajaContenido .texto__intro {
+    font-size: 1.2rem;
+    width: 95%; }
+  .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha,
+  .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda {
+    flex-direction: column; }
+    .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha .texto__contenido,
+    .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda .texto__contenido {
+      width: 100%;
+      padding: 0; }
+    .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha p,
+    .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda p {
+      font-size: 1.2rem;
+      width: 95%; }
+  .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha .img__contenido--izquierdo {
+    order: 0;
+    width: 90%;
+    padding: 10px 0; }
+  .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda .img__contenido--derecho {
+    width: 90%;
+    padding: 10px 0; }
   /*    PALMARES      */
   /* Estructura grid */
   .contenedor .premios {
-    width: 100%;
     padding: 0 10px;
     /* Encabezado Grid */
     /* Tablas Grid*/
@@ -443,43 +481,119 @@ h1, h2, h3, h4 {
         width: 40%;
         margin: 10px auto; }
   /*  CONTACTO   */
-  .formContacto {
-    width: 90%; }
-    .formContacto .btn-form {
-      width: 70%; } }
+  .contacto main .contenedorContacto {
+    height: 100%; }
+    .contacto main .contenedorContacto .formContacto {
+      width: 90%; }
+      .contacto main .contenedorContacto .formContacto .btn-form {
+        width: 70%; } }
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 691px) and (max-width: 991px) {
+  /*    INDEX    */
+  .index {
+    /* Header Index*/
+    /* Cuerpo Index */
+    /* Footer index */ }
+    .index .header__index .imgLogo-index {
+      width: 70px; }
+    .index .header__index h1 {
+      font-size: 4rem;
+      padding-right: 10px; }
+    .index main .contenedor-index .contenedorCard {
+      height: 90%; }
+      .index main .contenedor-index .contenedorCard .tarjeta {
+        width: 95%;
+        height: 85%; }
+        .index main .contenedor-index .contenedorCard .tarjeta h2 {
+          width: 100%;
+          font-size: 3rem; }
+        .index main .contenedor-index .contenedorCard .tarjeta .descripcion {
+          padding: 0 5px; }
+          .index main .contenedor-index .contenedorCard .tarjeta .descripcion h3 {
+            font-size: 3rem; }
+          .index main .contenedor-index .contenedorCard .tarjeta .descripcion p {
+            font-size: 1.5rem;
+            line-height: 1.3; }
+    .index .footer-index p {
+      font-size: 1.4rem; }
   /*    CARRERA     */
+  /* Header*/
+  .header .navbar .navbar-toggler {
+    font-size: 2.2rem; }
+  .header .navbar .collapse .navbar-nav .nav-link {
+    width: 100%;
+    margin: auto;
+    font-size: 2.2rem; }
+  .header .navbar .imgLogo {
+    width: 75px;
+    margin-left: 20px; }
   /* Contenido */
-  .contenedor .titulo__principal {
-    font-size: 3rem; }
-  .contenedor .cajaSeccion {
-    margin: 5px auto; }
-    .contenedor .cajaSeccion .titulo__contenido {
-      font-size: 1.8rem;
-      margin-bottom: 10px; }
-    .contenedor .cajaSeccion .cajaContenido .tituloSeccion {
+  .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha,
+  .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda {
+    flex-direction: column; }
+    .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha .texto__contenido,
+    .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda .texto__contenido {
+      width: 100%; }
+  .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha .img__contenido--izquierdo {
+    order: 0;
+    width: 95%;
+    padding: 10px 0; }
+  .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda .img__contenido--derecho {
+    width: 95%;
+    padding: 10px 0; }
+  /*    PALMARES      */
+  /* Estructura grid */
+  .contenedor .premios {
+    width: 90%; }
+    .contenedor .premios .nacionales .pais {
+      display: flex;
+      flex-direction: column; }
+      .contenedor .premios .nacionales .pais .iconoBandera {
+        width: 40%;
+        margin: 10px auto; }
+    .contenedor .premios .internacionales .sede {
+      display: flex;
+      flex-direction: column; }
+      .contenedor .premios .internacionales .sede .iconoBandera {
+        width: 40%;
+        margin: 10px auto; }
+  /*  CONTACTO   */
+  .contacto main {
+    min-height: 100%; }
+    .contacto main .contenedorContacto {
+      height: 90%; }
+      .contacto main .contenedorContacto .introForm .txtContacto {
+        font-size: 1.4rem;
+        padding: 50px 0; }
+      .contacto main .contenedorContacto .formContacto {
+        width: 90%;
+        padding-top: 70px; }
+        .contacto main .contenedorContacto .formContacto label,
+        .contacto main .contenedorContacto .formContacto input,
+        .contacto main .contenedorContacto .formContacto select,
+        .contacto main .contenedorContacto .formContacto textarea,
+        .contacto main .contenedorContacto .formContacto button {
+          font-size: 1.4rem; }
+        .contacto main .contenedorContacto .formContacto .btn-form {
+          width: 70%; }
+  .footer p {
+    font-size: 1.4rem; } }
+
+@media screen and (min-width: 992px) {
+  /*  CONTACTO   */
+  .contacto main {
+    min-height: 100%; }
+    .contacto main .contenedorContacto .introForm .txtContacto {
       font-size: 1.4rem;
-      margin: 25px 0 10px 0; }
-    .contenedor .cajaSeccion .cajaContenido .texto__intro {
+      padding: 50px 0; }
+    .contacto main .contenedorContacto .formContacto {
       width: 90%;
-      margin: 10px auto; }
-    .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha {
-      flex-direction: column; }
-      .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha .texto__contenido {
-        width: 100%;
-        padding: 0; }
-      .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha p {
-        width: 95%; }
-      .contenedor .cajaSeccion .cajaContenido .contenedor__texto--derecha .img__contenido--izquierdo {
-        order: 0;
-        width: 90%; }
-    .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda {
-      flex-direction: column; }
-      .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda .texto__contenido {
-        width: 100%;
-        padding: 0; }
-      .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda p {
-        width: 95%; }
-      .contenedor .cajaSeccion .cajaContenido .contenedor__texto--izquierda .img__contenido--derecho {
-        width: 90%; } }
+      padding-top: 50px; }
+      .contacto main .contenedorContacto .formContacto label,
+      .contacto main .contenedorContacto .formContacto input,
+      .contacto main .contenedorContacto .formContacto select,
+      .contacto main .contenedorContacto .formContacto textarea,
+      .contacto main .contenedorContacto .formContacto button {
+        font-size: 1.4rem; }
+      .contacto main .contenedorContacto .formContacto .btn-form {
+        width: 70%; } }

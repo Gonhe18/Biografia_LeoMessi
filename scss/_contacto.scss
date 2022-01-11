@@ -1,20 +1,34 @@
 /* Contacto */
-.introForm {
-  width: $widthTotal * 0.95;
-  margin: auto;
-  .txtContacto {
-    font-size: $contenido;
-    font-family: $textos;
-    width: $widthTotal;
-    padding: 0 5px;
-    line-height: $interlineado;
-  }
-}
-.formContacto {
-  width: $widthTotal * 0.7;
-  margin: auto;
-  .btn-form {
-    width: $widthTotal * 0.3;
-    margin: 10px 0;
+.contacto {
+  height: 100vh;
+
+  main {
+    .contenedorContacto {
+      @extend .flex_aCenter;
+      flex-direction: column;
+      width: $widthTotal;
+      .titulo__principal {
+        @extend .titulo_principal;
+      }
+      .introForm {
+        width: $widthTotal * 0.95;
+        margin: 0 auto;
+        .txtContacto {
+          font-size: $contenido;
+          font-family: $textos;
+          width: $widthTotal;
+          padding: 0 5px;
+          line-height: $interlineado;
+        }
+      }
+      .formContacto {
+        width: $widthTotal * 0.7;
+        margin: 0 auto;
+        .btn-form {
+          width: $widthTotal * 0.3;
+          margin: 10px 0;
+        }
+      }
+    }
   }
 }
