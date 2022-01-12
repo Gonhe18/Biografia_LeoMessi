@@ -177,17 +177,17 @@
             width: $widthTotal * 0.95;
             height: 85%;
             h2 {
-              width: 100%;
-              font-size: $secundario;
+              width: 50%;
+              font-size: $secundario - 1.2;
             }
             .descripcion {
               padding: 0 5px;
 
               h3 {
-                font-size: $secundario;
+                font-size: $secundario - 1;
               }
               p {
-                font-size: $contenido + 0.3;
+                font-size: $contenido - 0.2;
                 line-height: $interlineado;
               }
             }
