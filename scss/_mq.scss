@@ -68,8 +68,17 @@
   }
   /* Cuerpo de la web*/
   .contenedor {
+    .titulo__principal{
+      font-size: 3rem;
+    }
     .cajaSeccion {
+      .titulo__contenido{
+        font-size: 2.5rem;
+      }
       .cajaContenido {
+        .tituloSeccion{
+          font-size: 1.8rem;
+        }
         .texto__intro {
           font-size: $contenido;
           width: $widthTotal * 0.95;
