@@ -433,6 +433,12 @@ h1, h2, h3, h4 {
     width: 50px;
     margin-left: 10px; }
   /* Cuerpo de la web*/
+  .contenedor .titulo__principal {
+    font-size: 3rem; }
+  .contenedor .cajaSeccion .titulo__contenido {
+    font-size: 2.5rem; }
+  .contenedor .cajaSeccion .cajaContenido .tituloSeccion {
+    font-size: 1.8rem; }
   .contenedor .cajaSeccion .cajaContenido .texto__intro {
     font-size: 1.2rem;
     width: 95%; }
