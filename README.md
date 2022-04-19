@@ -1,4 +1,4 @@
-# BIOGRAFÍA LEO MESSI :tw-26bd: - CODEHOUSE
+# BIOGRAFÍA LEO MESSI - CODEHOUSE
 
 Sitio web creado como parte del proyecto final del curso de Desarrollo Web, de CoderHouse.
 
